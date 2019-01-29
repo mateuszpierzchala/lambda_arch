@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"E:/boxes/spark-kafka-cassandra-applying-lambda-architecture/vagrant","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"E:/boxes/spark-kafka-cassandra-applying-lambda-architecture/lambda_arch/vagrant","disabled":false,"__vagrantfile":true}}}
