@@ -1,30 +1,36 @@
+/** oto LogProducer- jak nazwa wskazuje jest to program generujący logi imitujące
+  *ruch na stronie sklepu internetowego. Część danych jak nazwy producentów jest
+  *pobierana z plików CSV a część np. timestamp jest generowana losowo. Wytworzeone 
+  *tak logi zostaną użyte do przetwarzania w kolejnych etapach projektu*/
+
 package clickstream
 
 import java.io.FileWriter
-
 import config.Settings
-
 import scala.util.Random
+import org.apache.commons.io.FileUtils
 
 object LogProducer extends App {
 
   //weblog configuration
   val wlc = Settings.WebLogGen
-//importowanie danych z plikow csv i parsowanie to rzędów i przekształcenie na array
+  //importowanie danych z plikow csv i parsowanie to rzędów i przekształcenie na array
   val Products = scala.io.Source.fromInputStream(getClass.getResourceAsStream("/products.csv")).getLines().toArray
   val Referrers = scala.io.Source.fromInputStream(getClass.getResourceAsStream("/referrers.csv")).getLines().toArray
-//wczytanie gosci z pliku app ( wart int ) stworzenie zakresu od zera do max wartosci
+  //wczytanie gosci z pliku app ( wart int ) stworzenie zakresu od zera do max wartosci
   // i stworzenie dla kazdego goscia stringu "visitor - numer"
   val Visitors = (0 to wlc.visitors).map("Visitor - " + _)
   // to samo dla pages
-   val Pages = (0 to wlc.pages).map("Page - " + _)
+  val Pages = (0 to wlc.pages).map("Page - " + _)
 
   //wygenerowanie nowego obiektu random
-
   val rnd = new Random()
+
   val filePath = wlc.filePath
   val destPath = wlc.destPath
-
+//dla zakresu od 1 do wlc.numberOfFiles tworzony jest obiekt FileWriter
+//który umozliwia zapisanie do pliku wygenerowanych logów
+//
   for (fileCount <- 1 to wlc.numberOfFiles) {
     val fw = new FileWriter(filePath, true)
 
@@ -32,7 +38,9 @@ object LogProducer extends App {
     val incrementTimeEvery = rnd.nextInt(wlc.records -1) + 1
     var timestamp = System.currentTimeMillis()
     var adjustedTimeStamp = timestamp
-
+// dla wszystkich rekordów(wartość zadana) tworzymy po jednym logu
+// log zapisany w stałej line składa się z kolejno tworzonych losowo elementów: adjustedTimeStamp
+// referrer, action itd.
     for (iteration <- 1 to wlc.records){
       adjustedTimeStamp = adjustedTimeStamp + ((System.currentTimeMillis()-timestamp) * wlc.timeMultiplier)
       timestamp = System.currentTimeMillis()
@@ -63,6 +71,7 @@ object LogProducer extends App {
 
     }
     fw.close()
+// zapisywanie danych do plików, nazwy generowane z użyciem "timestamp"
 
     val outputFile = FileUtils.getFile(s"${destPath}data_$timestamp")
     println(s"Moving produced data to $outputFile")
