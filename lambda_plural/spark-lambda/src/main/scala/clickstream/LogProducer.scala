@@ -8,7 +8,7 @@ package clickstream
 import java.io.FileWriter
 import config.Settings
 import scala.util.Random
-import org.apache.commons.io.FileUtils
+
 
 object LogProducer extends App {
 
@@ -27,11 +27,11 @@ object LogProducer extends App {
   val rnd = new Random()
 
   val filePath = wlc.filePath
-  val destPath = wlc.destPath
+  //val destPath = wlc.destPath
 //dla zakresu od 1 do wlc.numberOfFiles tworzony jest obiekt FileWriter
 //który umozliwia zapisanie do pliku wygenerowanych logów
 //
-  for (fileCount <- 1 to wlc.numberOfFiles) {
+  //for (fileCount <- 1 to wlc.numberOfFiles) {
     val fw = new FileWriter(filePath, true)
 
    //randomizacja odstępu czasowego kolejnych klików
@@ -73,11 +73,11 @@ object LogProducer extends App {
     fw.close()
 // zapisywanie danych do plików, nazwy generowane z użyciem "timestamp"
 
-    val outputFile = FileUtils.getFile(s"${destPath}data_$timestamp")
-    println(s"Moving produced data to $outputFile")
-    FileUtils.moveFile(FileUtils.getFile(filePath), outputFile)
-    val sleeping = 5000
-    println(s"Sleeping for $sleeping ms")
+    //val outputFile = FileUtils.getFile(s"${destPath}data_$timestamp")
+    //println(s"Moving produced data to $outputFile")
+   // FileUtils.moveFile(FileUtils.getFile(filePath), outputFile)
+    //val sleeping = 5000
+    //println(s"Sleeping for $sleeping ms")
 
-  }
+  //}
 }
