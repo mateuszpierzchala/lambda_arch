@@ -5,7 +5,7 @@ import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.sql.{SaveMode, SQLContext}
 import domain._
 
-_
+
 /** program wczytujący i przetwarzający dane z generatora logów
   *wczytuje dane jako RDD, następnie rozdziela rekordy i dzieli je na kategorie
   *a następnie wyłuskuje dane za pomoca Spark SQL **/
@@ -14,8 +14,7 @@ object BatchJob {
     def main(args: Array[String]): Unit = {
 
 
-        val conf = new SparkConf()
-          .setAppName("Lambda_spark")
+        val conf = new SparkConf().setAppName("Lambda_spark")
 
         // Check if running from IDE
         if (ManagementFactory.getRuntimeMXBean.getInputArguments.toString.contains("IntelliJ IDEA")) {
@@ -23,8 +22,8 @@ object BatchJob {
             conf.setMaster("local[*]")
         }
 
-        val sc = getSparkContext("Lambda_spark")
-        val sqlContext = getSQLContext(sc)
+        val sc = new SparkContext(conf)
+        implicit val sqlContext = new SQLContext(sc)
 
         import org.apache.spark.sql.functions._
         import sqlContext.implicits._
@@ -33,8 +32,8 @@ object BatchJob {
         val sourceFile = "file:///vagrant/data.tsv"
         val input = sc.textFile(sourceFile)
         // konwersja do DataFrame żeby później wyłuskać dane
-        val inputDF = input.flatmap {line =>
-            val record = line.split("\\t")
+        val inputDF = input.flatMap{ line =>
+            val record = line.split( "\\t" )
             val MS_IN_HOUR = 1000*60*60
             if(record.length == 7)
                 Some(Activity(record(0).toLong / MS_IN_HOUR * MS_IN_HOUR, record(1), record(2), record(3), record(4), record(5), record(6)))
@@ -46,7 +45,7 @@ object BatchJob {
                 inputDF("referrer"), inputDF("action"), inputDF("prevPage"), inputDF("page"), inputDF("visitor"), inputDF("product")
                         ).cache()
 
-              df.regiesterTempTable("activity")
+              df.registerTempTable("activity")
         val visitorsByProduct = sqlContext.sql(
             """SELECT product,timestamp_hour, COUNT(DISTINCT visitor) as unique_visitors
               |FROM activity GROUP BY product, timestamp_hour""".stripMargin)

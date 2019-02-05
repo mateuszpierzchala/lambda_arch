@@ -13,6 +13,9 @@
     </modules>
 
     <properties>
+        <scala.version>2.10.4</scala.version>
+        <scala.compat.version>2.10.4</scala.compat.version>
+        <scala.binary.version>2.10</scala.binary.version>
         <spark.version>1.6.0</spark.version>
         <chill.version>0.7.2</chill.version>
         <algebird.version>0.11.0</algebird.version>

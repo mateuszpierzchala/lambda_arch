@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="26b2c1a4-9341-4477-bba2-cfefb8da3a16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/spark-lambda/application.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/spark-lambda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/spark-lambda.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob2.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="-2599">
+              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -57,12 +54,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="-272">
+              <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
               <folding>
                 <element signature="e#15#60#0" expanded="true" />
-                <element signature="e#541#580#0" expanded="true" />
+                <element signature="e#911#950#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/domain/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -105,6 +111,7 @@
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
@@ -192,6 +199,15 @@
             <path>
               <item name="lambda_plural" type="b2602c69:ProjectViewProjectNode" />
               <item name="lambda_plural" type="462c0819:PsiDirectoryNode" />
+              <item name="spark-lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda_plural" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda_plural" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -201,12 +217,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549397782246" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549399280778" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../res/2-spark-kafka-exercise-files/demos/lambda-pluralsight" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -274,8 +290,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20787746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21225382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -292,7 +309,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50328225" side_tool="true" weight="0.32822758" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49671772" weight="0.3369803" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49671772" visible="true" weight="0.3369803" />
       <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.6739606" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -315,13 +332,6 @@
     <entry file="file://$PROJECT_DIR$/lambda-plural.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/typesafe/config/1.3.2/config-1.3.2.jar!/com/typesafe/config/impl/SimpleConfig.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -331,6 +341,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../vagrant/data.tsv">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2599">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-lambda/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -349,27 +380,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala">
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/domain/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state>
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="-272">
+          <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding>
             <element signature="e#15#60#0" expanded="true" />
-            <element signature="e#541#580#0" expanded="true" />
+            <element signature="e#911#950#0" expanded="true" />
           </folding>
         </state>
       </provider>
