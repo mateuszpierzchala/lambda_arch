@@ -1,7 +1,9 @@
 package batch
 
 import java.lang.management.ManagementFactory
-import org.apache.spark.{SparkContext, SparkConf}
+import org.apache.spark.SparkContext
+//import org.apache.spark.SparkContext._
+import org.apache.spark.SparkConf
 import org.apache.spark.sql.{SaveMode, SQLContext}
 //import domain._
 
@@ -24,14 +26,14 @@ object BatchJob {
         }
 
         // setup spark context
-        val sc  = new  SparkContext(conf)
+        val sc  = new  SparkContext(config = conf)
         //implicit val sqlContext = new SQLContext(sc)
 
         // import org.apache.spark.sql.functions._
         // import sqlContext.implicits._
 
         // initialize input RDD
-        val sourceFile = "file:///E:/boxes/spark-kafka-cassandra-applying-lambda-architecture/lambda_arch/vagrant/data.tsv"
+        val sourceFile = "E:/boxes/spark-kafka-cassandra-applying-lambda-architecture/lambda_arch/vagrant/data.tsv"
         val input = sc.textFile(sourceFile)
 
         input.foreach(println)

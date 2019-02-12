@@ -10,5 +10,8 @@
         <module name="spark-lambda" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cos" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
