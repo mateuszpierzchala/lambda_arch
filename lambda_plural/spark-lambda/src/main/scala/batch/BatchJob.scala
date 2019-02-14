@@ -15,28 +15,30 @@ import org.apache.spark.sql.{SaveMode, SQLContext}
 object BatchJob {
     def main (args: Array[String]): Unit = {
 
-        // get spark configuration
+        // konfiguracja sparka 
         val conf = new SparkConf()
           .setAppName("Lambda with Spark")
 
-        // Check if running from IDE
+        // sprawdzamy czy pracujemy z IDE
         if (ManagementFactory.getRuntimeMXBean.getInputArguments.toString.contains("IntelliJ IDEA")) {
-            System.setProperty("hadoop.home.dir", "C:\\Users\\ADM\\Desktop\\winutils.exe") // required for winutils
+            System.setProperty("hadoop.home.dir", "C:\\Users\\ADM\\Desktop\\winutils.exe") // tutaj ścieżka do wintulis //hadoop dla windows nie posiada wszystkich potrzebnych składników dlatego potrzeba pobrania winutils
             conf.setMaster("local[*]")
         }
 
-        // setup spark context
+        // nowy kontekst sparka
         val sc  = new  SparkContext(config = conf)
         //implicit val sqlContext = new SQLContext(sc)
 
         // import org.apache.spark.sql.functions._
         // import sqlContext.implicits._
 
-        // initialize input RDD
+        // inicjalizacja wejsciowego RDD
         val sourceFile = "E:/boxes/spark-kafka-cassandra-applying-lambda-architecture/lambda_arch/vagrant/data.tsv"
         val input = sc.textFile(sourceFile)
 
         input.foreach(println)
+        //tutaj stosujemy flatMap do rozdzielenia pliku .tsv na rekordy, następnie sprawdzamy czy rekordy składają się równo z 7 elementów
+        //wcześniej w klasie Activity zdefiniowaliśmy sobie nazwy pól rekordu- teraz z tego korzystamy przy konwersji z RDD na DataFrame
       /**  val inputDF = input.flatMap{ line =>
             val record = line.split("\\t")
             val MS_IN_HOUR = 1000 * 60 * 60
