@@ -13,7 +13,7 @@ object StreamingJob {
 
     //nowy SparkContext
     val sc = getSparkContext("Lambda with Spark")
-    val SQLContext = getSQLContext(sc)
+    val sqlContext = getSQLContext(sc)
     import sqlContext.implicits._
 
     //tworzenie instancji spark streaming context
