@@ -4,9 +4,8 @@ import java.lang.management.ManagementFactory
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SQLContext
-import org.apache.spark.streaming.StreamingContext
+import org.apache.spark.streaming.{Duration, StreamingContext}
 
-import scala.concurrent.duration.Duration
 
 object SparkUtils {
   //zmienna isIDE sprawdza czy pracujemy w srodowisku intellij
@@ -54,7 +53,7 @@ object SparkUtils {
   // jesli checkpoint nie istnieje po prostu stawia nowy ssc za pomoca cratingFunc
   def getStreamingContext(streamingApp: (SparkContext, Duration) => StreamingContext, sc : SparkContext, batchDuration: Duration) = {
     val creatingFunc : () => StreamingContext = () => streamingApp(sc, batchDuration)
-    sc.getCheckpointDir match {
+    val ssc= sc.getCheckpointDir match {
 
       case Some(checkpointDir) => StreamingContext.getActiveOrCreate(checkpointDir, creatingFunc, sc.hadoopConfiguration, createOnError = true)
       case None => StreamingContext.getActiveOrCreate(creatingFunc)

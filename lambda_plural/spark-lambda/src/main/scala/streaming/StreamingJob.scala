@@ -1,29 +1,28 @@
 package streaming
 
-import domain.{ActivityByProduct, Activity}
+import domain.{ ActivityByProduct, Activity}
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.functions._
 import org.apache.spark.streaming._
 import utils.SparkUtils._
-import org.apache.spark.sql.functions._
+
 import com.twitter.algebird.HyperLogLogMonoid
+
 
 object StreamingJob {
   def main(args: Array[String]): Unit = {
-
-    //nowy SparkContext
+    // setup spark context
     val sc = getSparkContext("Lambda with Spark")
     val sqlContext = getSQLContext(sc)
     import sqlContext.implicits._
 
-    //tworzenie instancji spark streaming context
     val batchDuration = Seconds(4)
 
     def streamingApp(sc: SparkContext, batchDuration: Duration) = {
       val ssc = new StreamingContext(sc, batchDuration)
 
       val inputPath = isIDE match {
-        case true => "file:///E:/boxes/spark-kafka-cassandra-applying-lambda-architecture/lambda_arch/vagrant/input"
+        case true => "E:\\boxes\\spark-kafka-cassandra-applying-lambda-architecture\\lambda_arch\\vagrant\\input"
         case false => "file:///vagrant/input"
       }
 
@@ -51,16 +50,15 @@ object StreamingJob {
                                             from activity
                                             group by product, timestamp_hour """)
         activityByProduct
-          .map{r => ((r.getString(0), r.getLong(1)),
+          .map { r => ((r.getString(0), r.getLong(1)),
             ActivityByProduct(r.getString(0), r.getLong(1), r.getLong(2), r.getLong(3), r.getLong(4))
           ) }
       } ).print()
 
       ssc
     }
+
     val ssc = getStreamingContext(streamingApp, sc, batchDuration)
-    //wywołanie kontekstu spark streaming rozpocznie pobieranie 4s batchy ze
-    //źródła zapisanie ich do RDD i wykonywanie na nich transformacji (print)
     ssc.start()
     ssc.awaitTermination()
 
