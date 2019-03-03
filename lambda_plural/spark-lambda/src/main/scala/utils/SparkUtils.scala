@@ -18,19 +18,21 @@ object SparkUtils {
     * jako argument przyjmuje string appName - nazwę aplikacji */
 
 
-
+//ustawiamy pusta sciezke dla checkpointDirectory
     var checkpointDirectory = ""
 
     // konfiguracja sparka
     val conf = new SparkConf()
       .setAppName(appName)
 
-    // sprawdzamy czy pracujemy z IDE- na potreby uruchomienia pod windows
+    // sprawdzamy czy pracujemy z IDE- na potrzeby uruchomienia pod windows
     // trzeba wskazac sciezke winutils
+    //ustawiamy checkpointDirecotry w zaleznosci od tego w którym srodowisku uruchomiony bedzie program
     if (isIDE) {
       System.setProperty("hadoop.home.dir", "C:\\Users\\ADM\\Desktop\\bin\\winutils.exe") // tutaj ścieżka do wintulis //hadoop dla windows nie posiada wszystkich potrzebnych składników dlatego potrzeba pobrania winutils
       conf.setMaster("local[*]")
-      checkpointDirectory = "file:///e:/boxes"
+      //checkpointDirectory = "file:///e:/boxes"
+      checkpointDirectory = "file:///C:/Users/mateusz.pierzchala/OneDrive - Agidens International NV/studia/programy/lambda/lambda_arch"
     } else {
       checkpointDirectory = "hdfs://lambda-pluralsight:9000/spark/checkpoint"
     }

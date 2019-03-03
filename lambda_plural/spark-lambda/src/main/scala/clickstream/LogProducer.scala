@@ -1,7 +1,4 @@
-/** oto LogProducer- jak nazwa wskazuje jest to program generujący logi imitujące
-  *ruch na stronie sklepu internetowego. Część danych jak nazwy producentów jest
-  *pobierana z plików CSV a część np. timestamp jest generowana losowo. Wytworzeone 
-  *tak logi zostaną użyte do przetwarzania w kolejnych etapach projektu*/
+
 
 package clickstream
 
@@ -12,6 +9,11 @@ import scala.util.Random
 
 
 object LogProducer extends App {
+
+  /** oto LogProducer- jak nazwa wskazuje jest to program generujący logi imitujące
+    *ruch na stronie sklepu internetowego. Część danych jak nazwy producentów jest
+    *pobierana z plików CSV a część np. timestamp jest generowana losowo. Wytworzeone
+    *tak logi zostaną użyte do przetwarzania w kolejnych etapach projektu*/
 
   //weblog configuration
   val wlc = Settings.WebLogGen
@@ -45,6 +47,8 @@ object LogProducer extends App {
   for (iteration <- 1 to wlc.records) {
     adjustedTimestamp = adjustedTimestamp + ((System.currentTimeMillis() - timestamp) * wlc.timeMultiplier)
     timestamp = System.currentTimeMillis() // move all this to a function
+
+    //definicja konkretnych pol rekordu
     val action = iteration % (rnd.nextInt(200) + 1) match {
       case 0 => "purchase"
       case 1 => "add_to_cart"
@@ -58,10 +62,10 @@ object LogProducer extends App {
     val visitor = Visitors(rnd.nextInt(Visitors.length - 1))
     val page = Pages(rnd.nextInt(Pages.length - 1))
     val product = Products(rnd.nextInt(Products.length - 1))
-
+    //skladanie rekordu w calosc
     val line = s"$adjustedTimestamp\t$referrer\t$action\t$prevPage\t$visitor\t$page\t$product\n"
     fw.write(line)
-
+    //czekaj na produkcje kolejnego loga
     if (iteration % incrementTimeEvery == 0) {
       println(s"Sent $iteration messages!")
       val sleeping = rnd.nextInt(1500)
