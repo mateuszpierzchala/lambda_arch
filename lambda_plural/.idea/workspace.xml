@@ -4,56 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b2c1a4-9341-4477-bba2-cfefb8da3a16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$typecreator2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$delayedInit$body.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$WebLogGen$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$WebLogGen$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1$$anonfun$apply$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2$$typecreator2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1$$anonfun$apply$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1$$typecreator4$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2$$anonfun$apply$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2$$typecreator6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2$$typecreator6$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$.class" afterDir="false" />
-    </list>
+    <list default="true" id="26b2c1a4-9341-4477-bba2-cfefb8da3a16" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spark-lambda/target/" />
