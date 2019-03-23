@@ -6,38 +6,53 @@
   <component name="ChangeListManager">
     <list default="true" id="26b2c1a4-9341-4477-bba2-cfefb8da3a16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lambda.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/spark-lambda.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/domain/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/domain/package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/src/main/scala/utils/SparkUtils.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/src/main/scala/utils/SparkUtils.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/META-INF/spark-lambda.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/domain/package$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/domain/package$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/domain/package$Activity$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/domain/package$Activity$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/domain/package.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/domain/package.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1$$anonfun$apply$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$anonfun$main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$$typecreator2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/batch/BatchJob$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer$delayedInit$body.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/clickstream/LogProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$WebLogGen$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings$WebLogGen$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/config/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapActivityStateFunc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$$anonfun$mapVisitorsStateFunc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/functions/package.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1$$anonfun$apply$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2$$typecreator2$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1$$anonfun$apply$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1$$typecreator2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1$$typecreator4$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2$$typecreator6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2$$typecreator6$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$$anonfun$streaming$StreamingJob$$streamingApp$1$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/streaming/StreamingJob$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/utils/SparkUtils$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/utils/SparkUtils$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/utils/SparkUtils$$anonfun$getStreamingContext$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/utils/SparkUtils$$anonfun$getStreamingContext$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spark-lambda/target/classes/utils/SparkUtils$.class" beforeDir="false" afterPath="$PROJECT_DIR$/spark-lambda/target/classes/utils/SparkUtils$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/box_meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/creator_uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/synced_folders" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd" beforeDir="false" afterPath="$PROJECT_DIR$/../vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vagrant/data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/../vagrant/data.tsv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,60 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-              <folding>
-                <element signature="e#344#369#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="36" />
-              <folding>
-                <element signature="e#15#60#0" expanded="true" />
-                <element signature="e#617#656#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1214">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-              <folding>
-                <element signature="e#19#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="48" column="106" selection-start-line="48" selection-start-column="106" selection-end-line="48" selection-end-column="106" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -128,10 +94,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="937">
+              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+              <folding>
+                <element signature="e#20#82#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/utils/SparkUtils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="66" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="66" />
+            <state relative-caret-position="716">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="e#15#60#0" expanded="true" />
               </folding>
@@ -140,10 +118,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf">
+        <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="157" selection-start-line="12" selection-start-column="157" selection-end-line="12" selection-end-column="157" />
+            <state relative-caret-position="-287">
+              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,11 +144,12 @@
       <find>E</find>
       <find>E:\</find>
       <find>time</find>
-      <find>TIme</find>
       <find>pages</find>
       <find>algeb</find>
+      <find>TIme</find>
       <find>filePa</find>
       <find>time_</find>
+      <find>kafka</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,16 +162,16 @@
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Setttings.scala" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/asdf.scala" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/package.scala" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spark-lambda/pom.xml" />
-        <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala" />
-        <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/domain/package.scala" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/utils/SparkUtils.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala" />
-        <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf" />
+        <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala" />
         <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala" />
+        <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala" />
+        <option value="$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala" />
       </list>
     </option>
   </component>
@@ -218,8 +200,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1570" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -230,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,6 +321,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,7 +329,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551608756432" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551942445859" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -457,10 +439,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1570" height="1047" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32251656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23413567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -469,15 +451,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49006623" visible="true" weight="0.32713348" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49015316" weight="0.3261105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50993377" side_tool="true" visible="true" weight="0.32713348" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5098468" side_tool="true" weight="0.3296582" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49413645" weight="0.3336945" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49413645" weight="0.33152762" />
       <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.6739606" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -509,41 +491,7 @@
     <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/asdf.scala" />
     <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/package.scala" />
     <entry file="file://$PROJECT_DIR$/cos/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/../vagrant/data.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="36" />
-          <folding>
-            <element signature="e#15#60#0" expanded="true" />
-            <element signature="e#617#656#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1214">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#19#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../vagrant/data.tsv" />
     <entry file="file://$PROJECT_DIR$/spark-lambda/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -553,18 +501,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="164">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/utils/SparkUtils.scala">
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/batch/BatchJob.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="66" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="66" />
+        <state relative-caret-position="391">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
           <folding>
-            <element signature="e#15#60#0" expanded="true" />
+            <element signature="e#16#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#24#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/config/Settings.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -577,27 +549,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/functions/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="48" column="106" selection-start-line="48" selection-start-column="106" selection-end-line="48" selection-end-column="106" />
+        <state relative-caret-position="-287">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/resources/application.conf">
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/streaming/StreamingJob.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="157" selection-start-line="12" selection-start-column="157" selection-end-line="12" selection-end-column="157" />
+        <state relative-caret-position="937">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+          <folding>
+            <element signature="e#20#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/clickstream/LogProducer.scala">
+    <entry file="file://$PROJECT_DIR$/spark-lambda/src/main/scala/utils/SparkUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        <state relative-caret-position="716">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
           <folding>
-            <element signature="e#344#369#0" expanded="true" />
+            <element signature="e#15#60#0" expanded="true" />
           </folding>
         </state>
       </provider>

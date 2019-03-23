@@ -1,8 +1,29 @@
 import com.twitter.algebird.{HLL, HyperLogLog, HyperLogLogMonoid}
-import domain.ActivityByProduct
+import domain.{Activity, ActivityByProduct}
+import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.State
+import org.apache.spark.streaming.kafka.HasOffsetRanges
 
 package object functions {
+
+  def rddToRDDActivity(input: RDD[(String, String)]) = {
+    val offsetRanges = input.asInstanceOf[HasOffsetRanges].offsetRanges
+
+    input.mapPartitionsWithIndex( {(index, it) =>
+      val or = offsetRanges(index)
+      it.flatMap { kv =>
+        val line = kv._2
+        val record = line.split("\\t")
+        val MS_IN_HOUR = 1000 * 60 * 60
+        if (record.length == 7)
+          Some(Activity(record(0).toLong / MS_IN_HOUR * MS_IN_HOUR, record(1), record(2), record(3), record(4), record(5), record(6),
+            Map("topic"-> or.topic, "kafkaPartition" -> or.partition.toString,
+              "fromOffset" -> or.fromOffset.toString, "untilOffset" -> or.untilOffset.toString)))
+        else
+          None
+      }
+    })
+  }
 
   def mapActivityStateFunc = (k: (String, Long), v: Option[ActivityByProduct], state: State[(Long, Long, Long)]) => {
     //bedzie służyc do akumulowania wartosci ilosci zakupów, dodan do koszyka i wyswietlen stron

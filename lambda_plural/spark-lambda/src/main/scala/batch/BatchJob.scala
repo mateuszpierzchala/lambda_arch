@@ -1,8 +1,8 @@
 package batch
 
-import java.lang.management.ManagementFactory
-import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.sql.{SQLContext, SaveMode}
+
+import config.Settings
+import org.apache.spark.sql.SaveMode
 import domain._
 import utils.SparkUtils._
 
@@ -17,37 +17,27 @@ object BatchJob {
 
         val sc = getSparkContext("Lambda with Spark")
         val sqlContext = getSQLContext(sc)
+        val wlc = Settings.WebLogGen
 
-        import org.apache.spark.sql.functions._
-        import sqlContext.implicits._
 
         // inicjalizacja wejsciowego RDD
-        val sourceFile = "file:///vagrant/data.tsv"
-        val input = sc.textFile(sourceFile)
+        // odczyt plikow parquet z hdfs
+        val inputDF = sqlContext.read.parquet(wlc.hdfsPath)
+          .where("unix_timestamp() - timestamp_hour / 1000 <= 60 * 60 * 6")
 
-
-
-        //tutaj stosujemy flatMap do rozdzielenia pliku .tsv na rekordy, następnie sprawdzamy czy rekordy składają się równo z 7 elementów
-        //wcześniej w klasie Activity zdefiniowaliśmy sobie nazwy pól rekordu- teraz z tego korzystamy przy konwersji z RDD na DataFrame
-        val inputDF = input.flatMap{ line =>
-            val record = line.split("\\t")
-            val MS_IN_HOUR = 1000 * 60 * 60
-            if (record.length == 7)
-                Some(Activity(record(0).toLong / MS_IN_HOUR * MS_IN_HOUR, record(1), record(2), record(3), record(4), record(5), record(6)))
-            else
-                None
-                                    }.toDF()
-
-        val df = inputDF.select(
-            add_months(from_unixtime(inputDF("timestamp_hour") / 1000), 1).as("timestamp_hour"),
-            inputDF("referrer"), inputDF("action"), inputDF("prevPage"), inputDF("page"), inputDF("visitor"), inputDF("product")
-        ).cache()
-
-        df.registerTempTable("activity")
+        inputDF.registerTempTable("activity")
         val visitorsByProduct = sqlContext.sql(
             """SELECT product, timestamp_hour, COUNT(DISTINCT visitor) as unique_visitors
               |FROM activity GROUP BY product, timestamp_hour
             """.stripMargin)
+
+
+      //zapis do cassandry visitorsByProduct
+        visitorsByProduct
+          .write
+          .format("org.apache.spark.sql.cassandra")
+          .options(Map( "keyspace" -> "lambda", "table" -> "batch_visitors_by_product"))
+          .save()
 
         val activityByProduct = sqlContext.sql("""SELECT
                                             product,
@@ -58,12 +48,12 @@ object BatchJob {
                                             from activity
                                             group by product, timestamp_hour """).cache()
 
-
-        activityByProduct.write.partitionBy("timestamp_hour").mode(SaveMode.Append).parquet("hdfs://lambda-pluralsight:9000/lambda/batch1")
-
-
-        visitorsByProduct.foreach(println)
-        activityByProduct.foreach(println)
+      //zapis do cassandry activityByProduct
+        activityByProduct
+          .write
+          .format("org.apache.spark.sql.cassandra")
+          .options(Map( "keyspace" -> "lambda", "table" -> "batch_activity_by_product"))
+          .save()
 
     }
 }
